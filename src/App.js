@@ -11,11 +11,12 @@ import Slider from './components/Slider';
 import Homescreen from './components/Homescreen';
 import MatchedRoutes from './components/MatchedRoutes';
 import AllRoutes from './components/AllRoutes';
+import MatchedBuses from './components/MatchedBuses';
 
 function App() {
   return (
       <div className="App">
-        <AllRoutes />
+        <MatchedBuses />
       </div>
   )
 }
