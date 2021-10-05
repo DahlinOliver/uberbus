@@ -12,11 +12,12 @@ import Homescreen from './components/Homescreen';
 import MatchedRoutes from './components/MatchedRoutes';
 import AllRoutes from './components/AllRoutes';
 import MatchedBuses from './components/MatchedBuses';
+import PaymentMethod from './components/PaymentMethod';
 
 function App() {
   return (
       <div className="App">
-        <MatchedBuses />
+        <PaymentMethod />
       </div>
   )
 }
