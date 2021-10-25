@@ -13,11 +13,12 @@ import MatchedRoutes from './components/MatchedRoutes';
 import AllRoutes from './components/AllRoutes';
 import MatchedBuses from './components/MatchedBuses';
 import PaymentMethod from './components/PaymentMethod';
+import BusInfo from './components/BusInfo';
 
 function App() {
   return (
       <div className="App">
-        <PaymentMethod />
+        <BusInfo />
       </div>
   )
 }

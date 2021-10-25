@@ -1,0 +1,296 @@
+import React from 'react';
+import styled from 'styled-components';
+
+import Karta from '../images/Karta.jpg';
+import LeftArrowIcon from '../images/left-arrow-circle.svg';
+import UberBus from '../images/uber-bus.png';
+import Nathan from '../images/nathan.png';
+import StarIcon from '../images/star-solid.svg';
+import User from '../images/user.svg';
+import Leaf from '../images/leaf.svg';
+import Timeline from '../images/timeline.svg';
+import Pickup from '../images/pickup.svg';
+import DropOff from '../images/drop-off.svg';
+
+const Map = styled.img`
+height: 414px;
+width: 100%;
+background-position: center;
+background-repeat: no-repeat;
+object-fit: cover;
+margin-bottom: 32px;
+`
+
+const LeftArrow = styled.img`
+position: absolute;
+left: 0;
+top: 48px;
+`
+
+const Img = styled.img`
+width: 63px;
+height: 48px;
+`
+
+const Img2 = styled.img`
+width: 84px;
+height: 84px;
+border-radius: 5px;
+margin-right: 16px;
+`
+
+const Row = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+/* border: 1px solid black; */
+margin: 1.5rem 0 1.5rem 0;
+`
+
+const Row2 = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+margin-top: 1.5rem;
+/* border: 1px solid black; */
+/* padding: 1.5rem 0 1.5rem 0; */
+`
+
+const Row3 = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+border-top: 1px solid #E2E2E2;
+border-bottom: 1px solid #E2E2E2;
+padding: 1rem 0 1rem 0;
+`
+
+const Column4 = styled.div`
+display: flex;
+flex-direction: column;
+flex-basis: 100%;
+flex: 1;
+justify-content: center;
+align-items: center;
+&:nth-child(1) {
+        border-right: 1px solid #E2E2E2;
+    }
+`
+
+const Column = styled.div`
+display: flex;
+flex-direction: column;
+flex-basis: 100%;
+flex: 1;
+justify-content: center;
+&:nth-child(2) {
+        justify-content: flex-start;
+    }
+`
+
+const Column2 = styled.div`
+display: flex;
+flex-direction: column;
+flex-basis: 100%;
+flex: 1;
+justify-content: flex-start;
+height: 100%;
+`
+
+const Column3 = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+justify-content: center;
+`
+
+const Column5 = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+margin-right: 10px;
+`
+
+const SubHeader = styled.h2`
+
+`
+
+const Para = styled.p`
+font-size: 14px;
+color: #717171;
+font-weight: 500;
+margin-right: 10px;
+`
+
+const Rating = styled.div`
+font-size: 12px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+background-color: #EEEEEE;
+border-radius: 36px;
+width: 66px;
+height: 36px;
+`
+
+const StarSolid = styled.img`
+width: 14px;
+height: 13px;
+margin-right: 5px;
+`
+
+const Rate = styled.div`
+font-size: 14px;
+font-weight: 500;
+`
+
+const PreviewMap = styled.img`
+width: 100%;
+height: 124px;
+border-radius: 5px;
+`
+
+const Button = styled.button`
+background-color: #000;
+height: 56px;
+width: 100%;
+color: #fff;
+border: none;
+font-size: 18px;
+font-weight: 400;
+margin: 3rem 0 3rem 0;
+`
+
+const Route = styled.img`
+
+`
+
+const Test = styled.div`
+margin-bottom: 3.7rem;
+`
+
+const Total = styled.p`
+font-size: 14px;
+color: #717171;
+font-weight: 500;
+`
+
+const EstTime = styled.p`
+font-size: 14px;
+color: #717171;
+font-weight: 500;
+`
+
+const Price = styled.p`
+font-size: 20px;
+color: #000;
+font-weight: 700;
+`
+
+const Time = styled.p`
+font-size: 20px;
+color: #000;
+font-weight: 700;
+`
+
+const LabelXsmall = styled.p`
+font-size: 12px;
+color: #717171;
+font-weight: 500;
+`
+
+const LabelMedium = styled.p`
+font-size: 16px;
+color: #000;
+font-weight: 500;
+`
+
+
+
+function BusInfo() {
+    return (
+        <div>
+            <Map src={Karta}></Map>
+            <LeftArrow src={LeftArrowIcon} />
+
+            <div className="container">
+                <Img src={UberBus}></Img>
+                <Row>
+                    <Column>
+                        <SubHeader>Uberbus</SubHeader>
+                        <Para>09:00 - 11 min away</Para>
+                    </Column>
+
+                    <Column>
+                    <Row>
+                        <img src={User}></img>
+                        <Para>11</Para>
+                    </Row>
+                    </Column>
+                </Row>
+
+                <Row>
+                    <Img2 src={Nathan}></Img2>
+                    <Column2>
+                        <SubHeader>Nathan Dumlao</SubHeader>
+                        <Para>Mercedes-Benz EQV</Para>
+                        <Row2>
+                            <img src={User}></img>
+                            <Para>11</Para>
+                            <img src={Leaf}></img>
+                        </Row2>
+                    </Column2>
+
+                    <Column3>
+                        <Rating>
+                            <StarSolid src={StarIcon} />
+                            <Rate>4.2</Rate>
+                        </Rating>
+                    </Column3>
+                </Row>
+
+                <Row3>
+                    <Column4>
+                        <Total>Total price</Total>
+                        <Price>$12.5</Price>
+                    </Column4>
+
+                    <Column4>
+                        <EstTime>Estimated time</EstTime>
+                        <Time>11 min</Time>
+                    </Column4>
+                </Row3>
+                
+                <Row>
+                    <Column5>
+                    <img src={Timeline}></img>
+                    </Column5>
+
+                    <Column>
+                        <Test>
+                            <LabelXsmall>Pickup</LabelXsmall>
+                            <LabelMedium>Odenplan</LabelMedium>
+                        </Test>
+
+                        <div>
+                            <LabelXsmall>Drop-off</LabelXsmall>
+                            <LabelMedium>Mall of Scandinavia</LabelMedium>
+                        </div>
+                    </Column>
+
+                    <Column>
+                    <PreviewMap src={Karta}></PreviewMap>
+                    </Column>
+                </Row>
+
+                <Button>Add payment method</Button>
+            </div>
+        </div>
+    )
+}
+
+export default BusInfo
