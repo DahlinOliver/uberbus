@@ -11,6 +11,9 @@ import Leaf from '../images/leaf.svg';
 import Timeline from '../images/timeline.svg';
 import Pickup from '../images/pickup.svg';
 import DropOff from '../images/drop-off.svg';
+import Olivia from '../images/olivia.png';
+import Jake from '../images/jake.png';
+import Thomas from '../images/thomas.png';
 
 const Map = styled.img`
 height: 414px;
@@ -47,13 +50,14 @@ width: 100%;
 margin: 1.5rem 0 1.5rem 0;
 `
 
-const Row5 = styled.div`
+const Alert = styled.div`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 width: 100%;
-justify-content: center;
 margin: 1rem 0 1rem 0;
+background-color: #000;
+height: 56px;
 `
 
 const Row2 = styled.div`
@@ -244,31 +248,82 @@ color: #000;
 font-weight: 500;
 `
 
+const Minutes = styled.p`
+font-size: 26px;
+color: #fff;
+font-weight: 700;
+`
 
+const MinText = styled.p`
+font-size: 16px;
+color: #fff;
+font-weight: 400;
+`
 
-function BusInfo() {
+const Text = styled.p`
+font-size: 16px;
+color: #fff;
+font-weight: 400;
+margin-left: 1.5rem;
+`
+
+const Column11 = styled.div`
+display: flex;
+flex-direction: column;
+border-right: 1px solid #e2e2e2;
+justify-content: center;
+align-items: center;
+padding: 0 1.5rem 0 1.5rem;
+`
+
+const Column10 = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
+const Img3 = styled.img`
+width: 52px;
+height: 52px;
+border-radius: 5px;
+margin-right: 16px;
+`
+
+const UserName = styled.h2`
+font-size: 20px;
+font-weight: 500;
+`
+
+const Row8 = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+border-bottom: 1px solid #e2e2e2;
+padding: 0.5rem 0 0.5rem 0;
+`
+
+const Passengers = styled.h2`
+margin: 3rem 0 1rem 0;
+`
+
+function TripDetails() {
     return (
         <div>
             <Map src={Karta}></Map>
             <LeftArrow src={LeftArrowIcon} />
 
             <div className="container">
-                <Row5>
-                    <Img src={UberBus}></Img>
-                </Row5>
-                <Row4>
-                    <Column8>
-                        <SubHeader>Uberbus</SubHeader>
-                        <Para>09:00 - 11 min away</Para>
-                    </Column8>
-
-                    <Column9>
-                    <Row4>
-                        <img src={User}></img>
-                        <Para>11</Para>
-                    </Row4>
-                    </Column9>
-                </Row4>
+                <Alert>
+                    <Column11>
+                        <Minutes>3</Minutes>
+                        <MinText>min</MinText>
+                    </Column11>
+                    <Column10>
+                        <Text>Your ride is 3 minutes away!</Text>
+                    </Column10>
+                </Alert>
 
                 <Row>
                     <Img2 src={Nathan}></Img2>
@@ -324,10 +379,46 @@ function BusInfo() {
                     </Column>
                 </Row>
 
-                <Button>Add payment method</Button>
+                <Passengers>Passengers</Passengers>
+                <Row8>
+                    <Img3 src={Olivia}></Img3>
+                    <Column>
+                        <UserName>Olivia Sterner</UserName>
+                    </Column>
+                    <Column3>
+                        <Rating>
+                            <StarSolid src={StarIcon} />
+                            <Rate>4.8</Rate>
+                        </Rating>
+                    </Column3>
+                </Row8>
+                <Row8>
+                    <Img3 src={Jake}></Img3>
+                    <Column>
+                        <UserName>Jake Matthews</UserName>
+                    </Column>
+                    <Column3>
+                        <Rating>
+                            <StarSolid src={StarIcon} />
+                            <Rate>4.1</Rate>
+                        </Rating>
+                    </Column3>
+                </Row8>
+                <Row8>
+                    <Img3 src={Thomas}></Img3>
+                    <Column>
+                        <UserName>Thomas Jensen</UserName>
+                    </Column>
+                    <Column3>
+                        <Rating>
+                            <StarSolid src={StarIcon} />
+                            <Rate>3.9</Rate>
+                        </Rating>
+                    </Column3>
+                </Row8>
             </div>
         </div>
     )
 }
 
-export default BusInfo
+export default TripDetails

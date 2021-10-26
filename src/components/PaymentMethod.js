@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import leftArrow from '../images/left-arrow.svg';
-import CountDownTimer from './CountDownTimer';
-import StarIcon from '../images/star-solid.svg';
-import CancelTrip from '../components/CancelTrip';
 
 const Header = styled.header`
 width: 100%;
@@ -27,25 +24,34 @@ font-size: 18px;
 text-align: center;
 `
 
-const Divider = styled.div`
-width: 100%;
-border: 1px solid #E2E2E2;
+const SubHeader = styled.h2`
+font-size: 24px;
+font-weight: 500;
+text-align: center;
+margin-bottom: 1rem;
 `
 
-const SubHeader = styled.h2`
-padding: 1.5rem 0 1.5rem 0;
-text-align: center;
-font-size: 26px;
+const Input = styled.input`
+width: 100%;
+height: 45px;
+border: 1px solid #e2e2e2;
+`
+
+const InputBtn = styled.input`
+background-color: #000;
+height: 56px;
+width: 100%;
+color: #fff;
+border: none;
+font-size: 18px;
+font-weight: 400;
+margin-top: 1.5rem;
 `
 
 const Row = styled.div`
 display: flex;
 flex-direction: row;
-flex-wrap: wrap;
 width: 100%;
-/* border-top: 1px solid #E2E2E2; */
-border-bottom: 1px solid #E2E2E2;
-padding: 1.5rem 0 1.5rem 0;
 `
 
 const Column = styled.div`
@@ -55,131 +61,45 @@ flex-basis: 100%;
 flex: 1;
 justify-content: center;
 align-items: center;
-&:nth-child(1) {
-        border-right: 1px solid #E2E2E2;
-    }
+border: 1px solid black;
 `
 
-const ColumnRating = styled.div`
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+const Divider = styled.div`
 width: 100%;
-flex-direction: column;
-align-items: center;
-margin: 1.5rem 0 1.5rem 0;
-`
-
-const Rating = styled.div`
-margin-top: 1rem;
-`
-
-const StarSolid = styled.img`
-width: 32px;
-height: 31px;
-`
-
-const PriceRow = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding: 0.5rem 0 0.5rem 0;
-`
-
-const Button = styled.button`
-background-color: #000;
-height: 56px;
-width: 100%;
-color: #fff;
-border: none;
-font-size: 18px;
-font-weight: 500;
-margin-top: 3rem;
-`
-
-const PriceP = styled.p`
-font-size: 16px;
-color: #545454;
-`
-
-const PriceStrong = styled.p`
-font-size: 16px;
-color: #000;
-`
-
-const Total = styled.p`
-font-size: 16px;
-color: #000;
-font-weight: 700;
+border: 1px solid #E2E2E2;
+margin-bottom: 4rem;
 `
 
 function PaymentMethod() {
-
-const hoursMinSecs = {hours:0, minutes: 0, seconds: 5}
-
     return (
         <div>
-        <div className="container">
+            <div className="container">
             <LeftArrow src={leftArrow} />
             <Header>
                 <Title>Payment</Title>
             </Header>
-            
-            {/* <CountDownTimer hoursMinSecs={hoursMinSecs} /> */}
-            <p>You have 10 min left to book</p>
-            <Divider />
-                <SubHeader>Booking details</SubHeader>
-            <Divider />
-            <Row>
-                <Column>
-                    <p>Trip Time = 11 min</p>
-                </Column>
 
-                <Column>
-                    <p>Arrives at 09:00</p>
-                </Column>
-            </Row>
-
-            <Row>
-                <ColumnRating>
-                    <p>Average rating of passengers</p>
-                    <Rating>
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                    </Rating>
-                </ColumnRating>
-            </Row>
-            
-            <Row>
-                <ColumnRating>
-                    <p>Average rating of driver</p>
-                    <Rating>
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                    </Rating>
-                </ColumnRating>
-            </Row>
-
-            <PriceRow>
-                <PriceP>Sub total</PriceP>
-                <PriceStrong>10.0$</PriceStrong>
-            </PriceRow>
-            <PriceRow>
-                <PriceP>VAT (25%)</PriceP>
-                <PriceStrong>2.5$</PriceStrong>
-            </PriceRow>
+            <SubHeader>Method of payment</SubHeader>
             <Divider />
-            <PriceRow>
-                <Total>Total</Total>
-                <Total>12.5$</Total>
-            </PriceRow>
-            <Button>Book now</Button>
-        </div>
-            <CancelTrip />
+
+            <form>
+                <Input type="text" placeholder="Cardholder" name="name" />
+                <Input type="text" placeholder="Cardnumber" name="name" />
+                <Row>
+                    <Input type="text" placeholder="MM / YY" name="name" />
+                    <Input type="text" placeholder="CVC" name="name" />
+                </Row>
+                <InputBtn type="submit" value="Add Card" />
+                <p>Or</p>
+                
+                <Row>
+                    <Column><div>a</div></Column>
+                    <Column><div>a</div></Column>
+                    <Column><div>a</div></Column>
+                    <Column><div>a</div></Column>
+                </Row>
+            </form>
+            </div>
         </div>
     )
 }
