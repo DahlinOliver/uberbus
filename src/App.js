@@ -16,11 +16,12 @@ import Payment from './components/Payment';
 import BusInfo from './components/BusInfo';
 import TripDetails from './components/TripDetails';
 import PaymentMethod from './components/PaymentMethod';
+import ChoosePayment from './components/ChoosePayment';
 
 function App() {
   return (
       <div className="App">
-        <PaymentMethod />
+        <ChoosePayment />
       </div>
   )
 }
