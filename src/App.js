@@ -17,11 +17,13 @@ import BusInfo from './components/BusInfo';
 import TripDetails from './components/TripDetails';
 import PaymentMethod from './components/PaymentMethod';
 import ChoosePayment from './components/ChoosePayment';
+import PaymentConfirmation from './components/PaymentConfirmation';
+import Arrival from './components/Arrival';
 
 function App() {
   return (
       <div className="App">
-        <ChoosePayment />
+        <Arrival />
       </div>
   )
 }
