@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import styled from 'styled-components';
 import leftArrow from '../images/left-arrow.svg';
 import Route1 from '../images/route1.jpg';
@@ -51,15 +58,19 @@ function MatchedRoutes() {
     return (
         <div className="container">
             <Header>
-                <LeftArrow src={leftArrow} />
+                <Link to="/">
+                    <LeftArrow src={leftArrow} />
+                </Link>
                 <Title>Matched Routes</Title>
             </Header>
             <Divider />
 
             <Subtitle>Odenplan - Mall of Scandinavia</Subtitle>
             <Map src={Route1}></Map>
-            <Button>View buses</Button>
 
+            <Link to="/matchedbuses">
+                <Button>View buses</Button>
+            </Link>
         </div>
     )
 }

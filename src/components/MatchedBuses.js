@@ -1,5 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
+
+import { useHistory } from "react-router-dom";
 
 import Karta from '../images/route1-big.jpg';
 import LeftArrowIcon from '../images/left-arrow-circle.svg';
@@ -70,13 +78,41 @@ height: 13px;
 `
 
 function MatchedBuses() {
+
+    let history = useHistory();
+    const goToPreviousPath = () => {
+        history.goBack()
+    }
+
     return (
         <div>
             <Map src={Karta}></Map>
-            <LeftArrow src={LeftArrowIcon} />
-        
+            <button onClick={goToPreviousPath}>
+                <LeftArrow src={LeftArrowIcon} />
+            </button>
             <div className="container">
                 <Subtitle>Choose bus</Subtitle>
+
+                <Link to="/businfo">
+                <Row>
+                    <Img src={Uberbus}></Img>
+
+                    <Column>
+                    <Row>
+                        <h3>Uberbus</h3>
+                        <p>11</p>
+                    </Row>
+                        <ArrivalTime>09:00 - 11 min away</ArrivalTime>
+                        
+                    </Column>
+                    <Rating>
+                        <StarSolid src={StarIcon} />
+                        <p>4.2</p>
+                    </Rating>
+                </Row>
+                </Link>
+
+                <Link to="/businfo">
                 <Row>
                     <Img src={Uberbus}></Img>
 
@@ -94,27 +130,7 @@ function MatchedBuses() {
                     </Rating>
                     
                 </Row>
-
-
-
-
-                <Row>
-                    <Img src={Uberbus}></Img>
-
-                    <Column>
-                    <Row>
-                        <h3>Uberbus</h3>
-                        <p>11</p>
-                    </Row>
-                        <ArrivalTime>09:00 - 11 min away</ArrivalTime>
-                        
-                    </Column>
-                    <Rating>
-                        <StarSolid src={StarIcon} />
-                        <p>4.2</p>
-                    </Rating>
-                    
-                </Row>
+                </Link>
 
             </div>
         </div>

@@ -5,6 +5,13 @@ import Route1 from '../images/route1.jpg';
 import Route2 from '../images/route2.jpg';
 import Warning from '../images/warning-icon.svg';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 const Header = styled.header`
 width: 100%;
 height: auto;
@@ -75,14 +82,18 @@ function AllRoutes() {
     return (
         <div className="container">
             <Header>
-                <LeftArrow src={leftArrow} />
+                <Link to="/">
+                    <LeftArrow src={leftArrow} />
+                </Link>
                 <Title>All Routes</Title>
             </Header>
             <Divider />
 
             <Subtitle>Odenplan - Mall of Scandinavia</Subtitle>
             <Map src={Route1}></Map>
-            <Button>View buses</Button>
+            <Link to="/matchedbuses">
+                <Button>View buses</Button>
+            </Link>
             
             <Divider />
 

@@ -1,5 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import leftArrow from '../images/left-arrow.svg';
 import User from '../images/user24.svg';
 import CreditCard from '../images/credit-card.svg';
@@ -136,7 +143,9 @@ function PaymentMethod() {
     return (
         <div>
         <div className="container">
-            <LeftArrow src={leftArrow} />
+            <Link to="/businfo">
+                <LeftArrow src={leftArrow} />
+            </Link>
             <Header>
                 <Title>Payment</Title>
             </Header>
@@ -172,16 +181,18 @@ function PaymentMethod() {
                     </InputContainer>
                 </Row>
 
-                <InputBtn type="submit" value="Add Card" />
+                <Link to="/choosepayment">
+                    <InputBtn type="submit" value="Add Card" />
+                </Link>
             </form>
 
             <Para>Or</Para>
                 
             <Row>
-                <Column><div><img src={Samsung}></img></div></Column>
-                <Column><div><img src={Google}></img></div></Column>
-                <Column><div><img src={Apple}></img></div></Column>
-                <Column><div><img src={PayPal}></img></div></Column>
+                <Column><Link to="/samsungpay"><div><img src={Samsung}></img></div></Link></Column>
+                <Column><Link to="/googlepay"><div><img src={Google}></img></div></Link></Column>
+                <Column><Link to="/applepay"><div><img src={Apple}></img></div></Link></Column>
+                <Column><Link to="/paypal"><div><img src={PayPal}></img></div></Link></Column>
             </Row>
             
             </div>

@@ -19,12 +19,85 @@ import PaymentMethod from './components/PaymentMethod';
 import ChoosePayment from './components/ChoosePayment';
 import PaymentConfirmation from './components/PaymentConfirmation';
 import Arrival from './components/Arrival';
+import SamsungPay from './components/SamsungPay';
+import GooglePay from './components/GooglePay';
+import ApplePay from './components/ApplePay';
+import PayPal from './components/PayPal';
+import BookBus from './components/BookBus';
 
 function App() {
   return (
+    <Router>
       <div className="App">
-        <Arrival />
+        <Switch>
+
+          <Route exact path="/">
+            <Homescreen />
+          </Route>
+
+          <Route exact path="/matchedroutes">
+            <MatchedRoutes />
+          </Route>
+
+          <Route exact path="/allroutes">
+            <AllRoutes />
+          </Route>
+
+          <Route exact path="/matchedbuses">
+            <MatchedBuses />
+          </Route>
+
+          <Route exact path="/payment">
+            <Payment />
+          </Route>
+
+          <Route exact path="/businfo">
+            <BusInfo />
+          </Route>
+
+          <Route exact path="/tripdetails">
+            <TripDetails />
+          </Route>
+
+          <Route exact path="/paymentmethod">
+            <PaymentMethod />
+          </Route>
+
+          <Route exact path="/choosepayment">
+            <ChoosePayment />
+          </Route>
+
+          <Route exact path="/paymentconfirmation">
+            <PaymentConfirmation />
+          </Route>
+
+          <Route exact path="/arrival">
+            <Arrival />
+          </Route>
+
+          <Route exact path="/samsungpay">
+            <SamsungPay />
+          </Route>
+
+          <Route exact path="/googlepay">
+            <GooglePay />
+          </Route>
+
+          <Route exact path="/applepay">
+            <ApplePay />
+          </Route>
+
+          <Route exact path="/paypal">
+            <PayPal />
+          </Route>
+
+          <Route exact path="/bookbus">
+            <BookBus />
+          </Route>
+
+        </Switch>
       </div>
+    </Router>
   )
 }
 

@@ -1,5 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 import Karta from '../images/Karta.jpg';
 import Hamburger from '../images/hamburger.svg';
@@ -97,8 +103,14 @@ function Homescreen() {
                     <Input type="text" placeholder="Enter destination" id="to" name="to" />
                 </InputTo>
 
-                <MatchedRoutes>Matched Routes</MatchedRoutes>
-                <AllRoutes>All Routes</AllRoutes>
+                <Link to="/matchedroutes">
+                    <MatchedRoutes to="matchedroutes">Matched Routes</MatchedRoutes>
+                </Link>
+                
+                <Link to="/allroutes">
+                    <AllRoutes>All Routes</AllRoutes>
+                </Link>
+
             </div>
         </div>
     )

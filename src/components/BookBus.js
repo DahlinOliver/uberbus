@@ -250,7 +250,7 @@ font-weight: 500;
 
 
 
-function BusInfo() {
+function BookBus() {
     return (
         <div>
             <Map src={Karta}></Map>
@@ -329,12 +329,12 @@ function BusInfo() {
                     </Column>
                 </Row>
 
-                <Link to="/paymentmethod">
-                    <Button>Add payment method</Button>
+                <Link to="/payment">
+                    <Button>Book Bus</Button>
                 </Link>
             </div>
         </div>
     )
 }
 
-export default BusInfo
+export default BookBus
