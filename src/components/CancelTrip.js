@@ -54,9 +54,22 @@ margin: 0 24px 0 24px;
 padding-top: 3.5rem;
 `
 
+const Bg = styled.div`
+background-color: rgba(0, 0, 0, 0.8);
+height: 100vh;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+`
+
 function CancelTrip() {
+
+const [toggle, setToggle] = useState(false);
+
     return (
         <div>
+            <Bg>
             <Modal>
             <Row>
                 <Title>Cancel Trip</Title>
@@ -64,10 +77,11 @@ function CancelTrip() {
 
             <Test>
                 <Button>Confirm</Button>
-                <Button2>Go Back</Button2>
+                <Button2 onClick={() => setToggle(toggle => !toggle)}>Go Back</Button2>
             </Test>
 
             </Modal>
+            </Bg>
         </div>
     )
 }

@@ -1,5 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import leftArrow from '../images/left-arrow.svg';
 import User from '../images/user24.svg';
 import CreditCard from '../images/credit-card.svg';
@@ -128,7 +135,9 @@ function ChoosePayment() {
     return (
         <div>
         <div className="container">
-            <LeftArrow src={leftArrow} />
+            <Link to="/paymentmethod">
+                <LeftArrow src={leftArrow} />
+            </Link>
             <Header>
                 <Title>Payment</Title>
             </Header>
@@ -136,6 +145,7 @@ function ChoosePayment() {
             <SubHeader>Choose payment</SubHeader>
             <Divider />
 
+            <Link to="/bookbus">
             <Block1>
                 <Column1>
                     <p>Mastercard</p>
@@ -143,25 +153,29 @@ function ChoosePayment() {
                 </Column1>
                 <Row1><img src={CheckCircle}></img></Row1>
             </Block1>
+            </Link>
 
+            <Link to="/bookbus">
             <Block2>
                 <Column1>
                     <p>Visa</p>
                     <p>XXXX-XXXX-XXXX-9314</p>
                 </Column1>
             </Block2>
+            </Link>
 
             <Para>Or</Para>
                 
             <Row>
-                <Column><div><img src={Samsung}></img></div></Column>
-                <Column><div><img src={Google}></img></div></Column>
-                <Column><div><img src={Apple}></img></div></Column>
-                <Column><div><img src={PayPal}></img></div></Column>
+                <Column><Link to="/samsungpay"><div><img src={Samsung}></img></div></Link></Column>
+                <Column><Link to="/googlepay"><div><img src={Google}></img></div></Link></Column>
+                <Column><Link to="/applepay"><div><img src={Apple}></img></div></Link></Column>
+                <Column><Link to="/paypal"><div><img src={PayPal}></img></div></Link></Column>
             </Row>
 
-            <Button>Add New Card</Button>
-            
+            <Link to="/paymentmethod">
+                <Button>Add New Card</Button>
+            </Link>
             </div>
         </div>
     )
