@@ -34,7 +34,7 @@ font-size: 18px;
 text-align: center;
 `
 
-const Divider = styled.div`
+const Divider = styled.hr`
 width: 100%;
 border: 1px solid #E2E2E2;
 `
@@ -254,7 +254,9 @@ const [toggle, setToggle] = useState(false);
                 <Total>Total</Total>
                 <Total>12.5$</Total>
             </PriceRow>
-            <Button>Book now</Button>
+            <Link to="/paymentconfirmation">
+                <Button>Book now</Button>
+            </Link>
         </div>
             {toggle && 
             <Bg>

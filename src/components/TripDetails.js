@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Link
+} from "react-router-dom";
 
 import Karta from '../images/route1-big.jpg';
 import LeftArrowIcon from '../images/left-arrow-circle.svg';
@@ -312,7 +317,9 @@ function TripDetails() {
     return (
         <div>
             <Map src={Karta}></Map>
-            <LeftArrow src={LeftArrowIcon} />
+            <Link to="/paymentconfirmation">
+                <LeftArrow src={LeftArrowIcon} />
+            </Link>
 
             <div className="container">
                 <Alert>

@@ -1,5 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import FilledCheck from '../images/check-circle-filled.svg';
 
 const Header = styled.header`
@@ -146,12 +153,16 @@ function PaymentConfirmation() {
                 <Total>12.5$</Total>
             </PriceRow>
 
-            <SecButton>Trip Details</SecButton>
+            <Link to="/tripdetails">
+                <SecButton>Trip Details</SecButton>
+            </Link>
             <Order>Order #UPL257</Order>
 
             <Modal>
                 <Div>
-                    <Button>Continue</Button>
+                    <Link to="/arrival">
+                        <Button>Continue</Button>
+                    </Link>
                 </Div>
             </Modal>
         </div>

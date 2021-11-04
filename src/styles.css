@@ -94,6 +94,10 @@ body {
   background-color: #545454;
 }
 
+a {
+  width: 100%;
+}
+
 /* .swiper-slide {
   background-position: center;
   background-size: cover;
