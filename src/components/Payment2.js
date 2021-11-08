@@ -190,7 +190,7 @@ const GoBack = styled.button`
 border: none;
 `
 
-function Payment() {
+function Payment2() {
 
 const hoursMinSecs = {hours:0, minutes: 0, seconds: 5}
 
@@ -217,7 +217,7 @@ const [toggle, setToggle] = useState(false);
                 </Column>
 
                 <Column>
-                    <p>Arrives at 09:00</p>
+                    <p>Arrives at 09:10</p>
                 </Column>
             </Row>
 
@@ -258,7 +258,7 @@ const [toggle, setToggle] = useState(false);
                 <Total>Total</Total>
                 <Total>12.5$</Total>
             </PriceRow>
-            <Link to="/paymentconfirmation">
+            <Link to="/paymentconfirmation2">
                 <Button>Book now</Button>
             </Link>
         </div>
@@ -270,7 +270,7 @@ const [toggle, setToggle] = useState(false);
             </RowTrip>
 
             <Test>
-                <Link to="/bookbus">
+                <Link to="/bookbus2">
                     <ButtonTrip>Confirm</ButtonTrip>
                 </Link>
                 <Button2 onClick={() => setToggle(toggle => !toggle)}>Go Back</Button2>
@@ -283,4 +283,4 @@ const [toggle, setToggle] = useState(false);
     )
 }
 
-export default Payment
+export default Payment2

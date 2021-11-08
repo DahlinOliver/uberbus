@@ -97,8 +97,7 @@ function Slider() {
         <SwiperSlide>
             <Img src={intro} />
             <Title>Enter your destination</Title>
-            <Paragraph>Open the app and enter where you’re going in the Where to? box. 
-            A map will comeup showing the nearby routes.</Paragraph>
+            <Paragraph>Choose pickup and drop-off destination and search for routes.</Paragraph>
         </SwiperSlide>
 
         <SwiperSlide>
@@ -119,8 +118,9 @@ function Slider() {
             <Paragraph>You can now pay for your UberBus ride with several payment methods to make it easy for you.</Paragraph>
         </SwiperSlide>
       </Swiper>
-      <Next>Next</Next>
-      <Skip>Skip</Skip>
+      <Link to="/">
+        <Next>Skip</Next>
+      </Link>
     </div>
     )
 }

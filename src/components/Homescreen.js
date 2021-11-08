@@ -95,12 +95,12 @@ function Homescreen() {
             <div className="container">
                 <InputFrom>
                     <Label for="from">From:</Label>
-                    <Input type="text" placeholder="Enter pickup" id="from" name="from" />
+                    <Input type="text" placeholder="Karlbergsvägen 12" id="from" name="from" />
                 </InputFrom>
 
                 <InputTo>
                     <Label for="to">To:</Label>
-                    <Input type="text" placeholder="Enter destination" id="to" name="to" />
+                    <Input type="text" placeholder="Mall of Scandinavia" id="to" name="to" />
                 </InputTo>
 
                 <Link to="/matchedroutes">

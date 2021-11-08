@@ -164,7 +164,7 @@ function MatchedBuses() {
                 </RowCenter>
                 </Link>
 
-                <Link to="/businfo">
+                <Link to="/businfo2">
                 <RowCenter>
                     <Img src={Uberbus}></Img>
 
