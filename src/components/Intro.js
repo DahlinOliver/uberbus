@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import logo from '../images/uberbus-logo.svg';
 import styled from 'styled-components';
 
@@ -17,6 +17,7 @@ margin-top: -25%;
 `
 
 function Intro() {
+
     return (
         <div>
             <Background>

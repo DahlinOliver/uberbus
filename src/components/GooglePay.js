@@ -1,4 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useHistory,
+  Redirect,
+} from "react-router-dom";
+
 import styled from 'styled-components';
 import Google from '../images/google.png';
 
@@ -17,6 +26,15 @@ margin-top: -25%;
 `
 
 function GooglePay() {
+
+const history = useHistory();
+
+useEffect(() => {
+  setTimeout(() => {
+    history.push('/bookbus');
+  }, 1000);
+}, []);
+
     return (
         <div className="container">
             <Background>

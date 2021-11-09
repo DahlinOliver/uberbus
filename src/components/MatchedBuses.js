@@ -5,9 +5,8 @@ import {
   Switch,
   Route,
   Link,
+  useHistory,
 } from "react-router-dom";
-
-import { useHistory } from "react-router-dom";
 
 import Karta from '../images/route1-big.jpg';
 import LeftArrowIcon from '../images/left-arrow-circle.svg';
@@ -87,6 +86,12 @@ height: 36px;
 const StarSolid = styled.img`
 width: 14px;
 height: 13px;
+margin-right: 5px;
+`
+
+const Rate = styled.div`
+font-size: 14px;
+font-weight: 500;
 `
 
 const Row4 = styled.div`
@@ -159,7 +164,7 @@ function MatchedBuses() {
                     </Column>
                     <Rating>
                         <StarSolid src={StarIcon} />
-                        <p>4.2</p>
+                        <Rate>4.2</Rate>
                     </Rating>
                 </RowCenter>
                 </Link>
@@ -185,7 +190,7 @@ function MatchedBuses() {
                     </Column>
                     <Rating>
                         <StarSolid src={StarIcon} />
-                        <p>4.7</p>
+                        <Rate>4.7</Rate>
                     </Rating>
                 </RowCenter>
                 </Link>

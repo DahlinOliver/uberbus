@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect,
 } from "react-router-dom";
 
 import Karta from '../images/Karta.jpg';
 import Hamburger from '../images/hamburger.svg';
+import Intro from './Intro';
 
 const primaryWhite = "#ffffff";
 const primaryBlack = "#000000";
@@ -87,20 +89,35 @@ font-size: ${LargeP};
 `
 
 function Homescreen() {
+
+const [isDisplayed, setIsDisplayed] = useState(true);
+
+useEffect(() => {
+  setInterval(() => {
+    setIsDisplayed(false);
+  }, 2000);
+}, []);
+
     return (
         <div>
+            {isDisplayed
+
+            ? <Intro />
+
+            :
+            <>
             <Map src={Karta}></Map>
             <Meny src={Hamburger} />
 
             <div className="container">
                 <InputFrom>
                     <Label for="from">From:</Label>
-                    <Input type="text" placeholder="Karlbergsvägen 12" id="from" name="from" />
+                    <Input type="text" placeholder="Karlbergsvägen 12" id="from" name="from" disabled/>
                 </InputFrom>
 
                 <InputTo>
                     <Label for="to">To:</Label>
-                    <Input type="text" placeholder="Mall of Scandinavia" id="to" name="to" />
+                    <Input type="text" placeholder="Mall of Scandinavia" id="to" name="to" disabled/>
                 </InputTo>
 
                 <Link to="/matchedroutes">
@@ -112,6 +129,9 @@ function Homescreen() {
                 </Link>
 
             </div>
+            </>
+            }
+
         </div>
     )
 }
