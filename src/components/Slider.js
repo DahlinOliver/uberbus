@@ -1,14 +1,18 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
+  Redirect,
 } from "react-router-dom";
 
 import styled from 'styled-components';
 import intro from '../images/intro.png';
+import Frame1 from '../images/frame1.jpg';
+import Frame2 from '../images/frame2.jpg';
+import Frame3 from '../images/frame3.jpg';
+import Intro from './Intro';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
@@ -79,49 +83,61 @@ font-size: ${LargeP};
 `
 
 function Slider() {
+
+const [isDisplayed, setIsDisplayed] = useState(true);
+
+useEffect(() => {
+  setInterval(() => {
+    setIsDisplayed(false);
+  }, 2000);
+}, []);
+
     return (
-    <div className="container">
-      <Swiper
-        /* navigation */
-        allowSlideNext={true}
-        centeredSlides={true}
-        slidesPerView={1}
-        spaceBetween={200}
-        loop={false}
-        pagination={{
-          clickable: true
-        }}
-        className="mySwiper"
-        onSlideChange={() => console.log('slide change')}
-      >
-        <SwiperSlide>
-            <Img src={intro} />
-            <Title>Enter your destination</Title>
-            <Paragraph>Choose pickup and drop-off destination and search for routes.</Paragraph>
-        </SwiperSlide>
+    <>
+      {isDisplayed
 
-        <SwiperSlide>
-            <Img src={intro} />
-            <Title>Choose your route</Title>
-            <Paragraph>Tap the route of your choice and you will see different cars available for that route.</Paragraph>
-        </SwiperSlide>
+      ? <Intro />
 
-        <SwiperSlide>
-            <Img src={intro} />
-            <Title>Choose bus</Title>
-            <Paragraph>Tap the bus of your choice and you will be able to see more descriptive information about the ride.</Paragraph>
-        </SwiperSlide>
+      :
 
-        <SwiperSlide>
-            <Img src={intro} />
-            <Title>Book UberBus</Title>
-            <Paragraph>You can now pay for your UberBus ride with several payment methods to make it easy for you.</Paragraph>
-        </SwiperSlide>
-      </Swiper>
-      <Link to="/">
-        <Next>Skip</Next>
-      </Link>
-    </div>
+      <div className="container">
+        <Swiper
+          /* navigation */
+          allowSlideNext={true}
+          centeredSlides={true}
+          slidesPerView={1}
+          spaceBetween={200}
+          loop={false}
+          pagination={{
+            clickable: true
+          }}
+          className="mySwiper"
+          onSlideChange={() => console.log('slide change')}
+        >
+          <SwiperSlide>
+              <Img src={Frame1} />
+              <Title>Enter your destination</Title>
+              <Paragraph>Choose pickup and drop-off destination and search for routes.</Paragraph>
+          </SwiperSlide>
+
+          <SwiperSlide>
+              <Img src={Frame2} />
+              <Title>Choose bus</Title>
+              <Paragraph>Tap the bus of your choice and you will be able to see more descriptive information about the ride.</Paragraph>
+          </SwiperSlide>
+
+          <SwiperSlide>
+              <Img src={Frame3} />
+              <Title>Book UberBus</Title>
+              <Paragraph>You can now pay for your UberBus ride with several payment methods to make it easy for you.</Paragraph>
+          </SwiperSlide>
+        </Swiper>
+        <Link to="/homescreen">
+          <Next>Skip</Next>
+        </Link>
+      </div>
+      }
+      </>
     )
 }
 

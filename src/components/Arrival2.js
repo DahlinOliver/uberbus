@@ -298,7 +298,7 @@ function Arrival2() {
 
             <Modal>
                 <Div>
-                    <Link to="/">
+                    <Link to="/homescreen">
                         <Button>Continue</Button>
                     </Link>
                 </Div>

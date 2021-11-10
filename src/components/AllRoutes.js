@@ -82,7 +82,7 @@ function AllRoutes() {
     return (
         <div className="container">
             <Header>
-                <Link to="/">
+                <Link to="/homescreen">
                     <LeftArrow src={leftArrow} />
                 </Link>
                 <Title>All Routes</Title>

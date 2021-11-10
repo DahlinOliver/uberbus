@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const Strong = styled.strong`
 font-weight: 700;
@@ -35,11 +41,12 @@ align-items: center;
 
 const Title = styled.h1`
 color: #000;
-
+margin-bottom: 0.5rem;
 `
 
 const Paragraph = styled.p`
-
+margin-bottom: 2rem;
+text-align: center;
 `
 
 const Button = styled.button`
@@ -88,9 +95,11 @@ const CountDownTimer = ({hoursMinSecs}) => {
 
             <ModalOverlay>
                 <Alert>
-                    <Title>Your time is up</Title>
-                    <Paragraph>Your booking took to long time</Paragraph>
-                    <Button>Done</Button>
+                    <Title>Your time is up!</Title>
+                    <Paragraph>Your booking took to long time and it will now be canceled.</Paragraph>
+                    <Link to="/matchedbuses">
+                        <Button>Done</Button>
+                    </Link>
                 </Alert>
             </ModalOverlay>
 

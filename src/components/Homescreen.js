@@ -10,7 +10,6 @@ import {
 
 import Karta from '../images/Karta.jpg';
 import Hamburger from '../images/hamburger.svg';
-import Intro from './Intro';
 
 const primaryWhite = "#ffffff";
 const primaryBlack = "#000000";
@@ -90,22 +89,8 @@ font-size: ${LargeP};
 
 function Homescreen() {
 
-const [isDisplayed, setIsDisplayed] = useState(true);
-
-useEffect(() => {
-  setInterval(() => {
-    setIsDisplayed(false);
-  }, 2000);
-}, []);
-
     return (
         <div>
-            {isDisplayed
-
-            ? <Intro />
-
-            :
-            <>
             <Map src={Karta}></Map>
             <Meny src={Hamburger} />
 
@@ -129,9 +114,6 @@ useEffect(() => {
                 </Link>
 
             </div>
-            </>
-            }
-
         </div>
     )
 }

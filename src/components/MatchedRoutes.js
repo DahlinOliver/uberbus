@@ -58,7 +58,7 @@ function MatchedRoutes() {
     return (
         <div className="container">
             <Header>
-                <Link to="/">
+                <Link to="/homescreen">
                     <LeftArrow src={leftArrow} />
                 </Link>
                 <Title>Matched Routes</Title>

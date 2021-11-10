@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import {
   BrowserRouter as Router,
@@ -313,7 +313,78 @@ const Passengers = styled.h2`
 margin: 3rem 0 1rem 0;
 `
 
+const CancelBtn = styled.button`
+background-color: #E11900;
+height: 56px;
+width: 100%;
+color: #fff;
+border: none;
+font-size: 18px;
+font-weight: 400;
+margin: 3rem 0 3rem 0;
+`
+
+// Cancel Trip
+
+const ModalOverlay = styled.div`
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background-color: rgba(0,0,0,0.7);
+overflow: hidden;
+`
+
+const Alert2 = styled.div`
+position: fixed;
+top: 50%;
+left: 50%;
+width: 80%;
+height: 25%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 24px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+`
+
+const Title = styled.h1`
+color: #000;
+margin-bottom: 0.5rem;
+`
+
+const Paragraph = styled.p`
+margin-bottom: 2rem;
+text-align: center;
+`
+
+const Btn = styled.button`
+background-color: #E11900;
+height: 56px;
+width: 100%;
+color: #fff;
+border: none;
+font-size: 18px;
+font-weight: 400;
+`
+
+const Btn2 = styled.button`
+background-color: transparent;
+height: 56px;
+width: 100%;
+color: #000;
+border: none;
+font-size: 18px;
+font-weight: 500;
+`
+
 function TripDetails2() {
+
+const [toggle, setToggle] = useState(false);
+
     return (
         <div>
             <Map src={Karta}></Map>
@@ -423,6 +494,21 @@ function TripDetails2() {
                         </Rating>
                     </Column3>
                 </Row8>
+
+                <CancelBtn onClick={() => setToggle(toggle => !toggle)}>Cancel Booking</CancelBtn>
+
+                {toggle && 
+                    <ModalOverlay>
+                    <Alert2>
+                        <Title>Cancel ride</Title>
+                        <Paragraph>Are your sure you want to cancel your ride? You will be charged a small fee of 2$.</Paragraph>
+                        <Link to="/homescreen">
+                            <Btn>Cancel ride</Btn>
+                        </Link>
+                        <Btn2 onClick={() => setToggle(toggle => !toggle)}>Go back</Btn2>
+                    </Alert2>
+                    </ModalOverlay>
+                }
             </div>
         </div>
     )

@@ -192,7 +192,7 @@ border: none;
 
 function Payment2() {
 
-const hoursMinSecs = {hours:0, minutes: 0, seconds: 5}
+const hoursMinSecs = {hours:0, minutes: 10, seconds: 0}
 
 const [toggle, setToggle] = useState(false);
 
@@ -206,8 +206,8 @@ const [toggle, setToggle] = useState(false);
                 <Title>Payment</Title>
             </Header>
             
-            {/* <CountDownTimer hoursMinSecs={hoursMinSecs} /> */}
-            <p>You have 10 min left to book</p>
+            <CountDownTimer hoursMinSecs={hoursMinSecs} />
+            {/* <p>You have 10 min left to book</p> */}
             <Divider />
                 <SubHeader>Booking details</SubHeader>
             <Divider />
