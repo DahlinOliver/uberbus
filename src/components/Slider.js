@@ -68,7 +68,6 @@ useEffect(() => {
 
       <div className="container">
         <Swiper
-          /* navigation */
           allowSlideNext={true}
           centeredSlides={true}
           slidesPerView={1}
@@ -78,7 +77,6 @@ useEffect(() => {
             clickable: true
           }}
           className="mySwiper"
-          onSlideChange={() => console.log('slide change')}
         >
           <SwiperSlide>
               <Img src={Frame1} alt="Frame1" />
