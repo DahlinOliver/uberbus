@@ -39,7 +39,6 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 width: 100%;
-/* border: 1px solid black; */
 margin: 1.5rem 0 1.5rem 0;
 `
 
@@ -59,8 +58,6 @@ flex-direction: row;
 flex-wrap: wrap;
 width: 100%;
 margin-top: 1.5rem;
-/* border: 1px solid black; */
-/* padding: 1.5rem 0 1.5rem 0; */
 `
 
 const Row3 = styled.div`

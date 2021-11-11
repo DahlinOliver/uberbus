@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Karta from '../images/route1-big.jpg';
 import LeftArrowIcon from '../images/left-arrow-circle.svg';
@@ -108,11 +108,6 @@ margin-top: 8px;
 `
 
 function MatchedBuses() {
-
-    let history = useHistory();
-    const goToPreviousPath = () => {
-        history.goBack()
-    }
 
     return (
         <div>

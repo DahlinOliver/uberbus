@@ -44,7 +44,6 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 width: 100%;
-/* border-top: 1px solid #E2E2E2; */
 border-bottom: 1px solid #E2E2E2;
 padding: 1.5rem 0 1.5rem 0;
 `
@@ -148,7 +147,6 @@ color: #fff;
 border: none;
 font-size: 18px;
 font-weight: 400;
-/* margin: 0 24px 0 24px; */
 `
 
 const Button2 = styled.button`
@@ -201,7 +199,6 @@ const [toggle, setToggle] = useState(false);
             </Header>
             
             <CountDownTimer hoursMinSecs={hoursMinSecs} />
-            {/* <p>You have 10 min left to book</p> */}
             <Divider />
                 <SubHeader>Booking details</SubHeader>
             <Divider />

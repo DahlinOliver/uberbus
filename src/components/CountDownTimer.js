@@ -72,16 +72,11 @@ const CountDownTimer = ({hoursMinSecs}) => {
         }
     };
 
-
-    const reset = () => setTime([parseInt(hours), parseInt(minutes), parseInt(seconds)]);
-
-    
     React.useEffect(() => {
         const timerId = setInterval(() => tick(), 1000);
         return () => clearInterval(timerId);
     });
 
-    
     return (
         <div>
             {hrs === 0 && mins === 0 && secs === 0
