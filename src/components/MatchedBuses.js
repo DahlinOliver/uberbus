@@ -136,16 +136,16 @@ function MatchedBuses() {
 
     return (
         <div>
-            <Map src={Karta}></Map>
+            <Map src={Karta} alt="map"></Map>
             <button onClick={goToPreviousPath}>
-                <LeftArrow src={LeftArrowIcon} />
+                <LeftArrow src={LeftArrowIcon} alt="left-arrow" />
             </button>
             <div className="container">
                 <Subtitle>Choose bus</Subtitle>
 
                 <Link to="/businfo">
                 <RowCenter>
-                    <Img src={Uberbus}></Img>
+                    <Img src={Uberbus} alt="uberbus-icon"></Img>
 
                     <Column>
                         <Row4>
@@ -156,14 +156,14 @@ function MatchedBuses() {
 
                         <Column9>
                         <Row4>
-                            <img src={User}></img>
+                            <img src={User} alt="user-icon"></img>
                             <Para>11</Para>
                         </Row4>
                         </Column9>
                         </Row4>
                     </Column>
                     <Rating>
-                        <StarSolid src={StarIcon} />
+                        <StarSolid src={StarIcon} alt="star-icon" />
                         <Rate>4.2</Rate>
                     </Rating>
                 </RowCenter>
@@ -171,7 +171,7 @@ function MatchedBuses() {
 
                 <Link to="/businfo2">
                 <RowCenter>
-                    <Img src={Uberbus}></Img>
+                    <Img src={Uberbus} alt="uberbus-icon"></Img>
 
                     <Column>
                         <Row4>
@@ -182,14 +182,14 @@ function MatchedBuses() {
 
                         <Column9>
                         <Row4>
-                            <img src={User}></img>
+                            <img src={User} alt="user-icon"></img>
                             <Para>6</Para>
                         </Row4>
                         </Column9>
                         </Row4>
                     </Column>
                     <Rating>
-                        <StarSolid src={StarIcon} />
+                        <StarSolid src={StarIcon} alt="star-icon" />
                         <Rate>4.7</Rate>
                     </Rating>
                 </RowCenter>

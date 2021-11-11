@@ -38,7 +38,7 @@ useEffect(() => {
     return (
         <div className="container">
             <Background>
-                <Img src={Apple} />
+                <Img src={Apple} alt="apple-logo" />
             </Background>
         </div>
     )

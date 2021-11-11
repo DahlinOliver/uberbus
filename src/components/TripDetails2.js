@@ -387,9 +387,9 @@ const [toggle, setToggle] = useState(false);
 
     return (
         <div>
-            <Map src={Karta}></Map>
+            <Map src={Karta} alt="map"></Map>
             <Link to="/paymentconfirmation2">
-                <LeftArrow src={LeftArrowIcon} />
+                <LeftArrow src={LeftArrowIcon} alt="left-arrow"/>
             </Link>
 
             <div className="container">
@@ -404,20 +404,20 @@ const [toggle, setToggle] = useState(false);
                 </Alert>
 
                 <Row>
-                    <Img2 src={Sarah}></Img2>
+                    <Img2 src={Sarah} alt="sarah"></Img2>
                     <Column2>
                         <SubHeader>Sarah Wilson</SubHeader>
                         <Para>Ford E-Transit</Para>
                         <Row2>
-                            <img src={User}></img>
+                            <img src={User} alt="user-icon"></img>
                             <Para>6</Para>
-                            <img src={Leaf}></img>
+                            <img src={Leaf} alt="leaf-icon"></img>
                         </Row2>
                     </Column2>
 
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon"/>
                             <Rate>4.7</Rate>
                         </Rating>
                     </Column3>
@@ -437,14 +437,14 @@ const [toggle, setToggle] = useState(false);
                 
                 <Row>
                     <Column5>
-                    <img src={Timeline}></img>
+                    <img src={Timeline} alt="timeline"></img>
                     </Column5>
 
                     <Column7>
-                        <Test>
+                        <div>
                             <LabelXsmall>Pickup</LabelXsmall>
                             <LabelMedium>Odenplan</LabelMedium>
-                        </Test>
+                        </div>
 
                         <div>
                             <LabelXsmall>Drop-off</LabelXsmall>
@@ -453,43 +453,43 @@ const [toggle, setToggle] = useState(false);
                     </Column7>
 
                     <Column>
-                    <PreviewMap src={Karta}></PreviewMap>
+                    <PreviewMap src={Karta} alt="preview-map"></PreviewMap>
                     </Column>
                 </Row>
 
                 <Passengers>Passengers</Passengers>
                 <Row8>
-                    <Img3 src={Sophie}></Img3>
+                    <Img3 src={Sophie} alt="sophie"></Img3>
                     <Column>
                         <UserName>Sophie Barker</UserName>
                     </Column>
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon" />
                             <Rate>4.6</Rate>
                         </Rating>
                     </Column3>
                 </Row8>
                 <Row8>
-                    <Img3 src={Liam}></Img3>
+                    <Img3 src={Liam} alt="liam"></Img3>
                     <Column>
                         <UserName>Liam Brown</UserName>
                     </Column>
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon" />
                             <Rate>4.5</Rate>
                         </Rating>
                     </Column3>
                 </Row8>
                 <Row8>
-                    <Img3 src={Grace}></Img3>
+                    <Img3 src={Grace} alt="grace"></Img3>
                     <Column>
                         <UserName>Grace Knight</UserName>
                     </Column>
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon" />
                             <Rate>4.3</Rate>
                         </Rating>
                     </Column3>

@@ -200,7 +200,7 @@ const [toggle, setToggle] = useState(false);
         <div>
         <div className="container">
             <GoBack onClick={() => setToggle(toggle => !toggle)}>
-                <LeftArrow src={leftArrow} />
+                <LeftArrow src={leftArrow} alt="left-arrow" />
             </GoBack>
             <Header>
                 <Title>Payment</Title>
@@ -225,10 +225,10 @@ const [toggle, setToggle] = useState(false);
                 <ColumnRating>
                     <p>Average rating of passengers</p>
                     <Rating>
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
+                        <StarSolid src={StarIcon} alt="star-icon" />
+                        <StarSolid src={StarIcon} alt="star-icon" />
+                        <StarSolid src={StarIcon} alt="star-icon" />
+                        <StarSolid src={StarIcon} alt="star-icon" />
                     </Rating>
                 </ColumnRating>
             </Row>
@@ -237,10 +237,10 @@ const [toggle, setToggle] = useState(false);
                 <ColumnRating>
                     <p>Average rating of driver</p>
                     <Rating>
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
-                        <StarSolid src={StarIcon} />
+                        <StarSolid src={StarIcon} alt="star-icon" />
+                        <StarSolid src={StarIcon} alt="star-icon" />
+                        <StarSolid src={StarIcon} alt="star-icon" />
+                        <StarSolid src={StarIcon} alt="star-icon" />
                     </Rating>
                 </ColumnRating>
             </Row>

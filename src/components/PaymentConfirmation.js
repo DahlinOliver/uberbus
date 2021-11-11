@@ -134,7 +134,7 @@ function PaymentConfirmation() {
             </Header>
 
             <Confirmation>
-                <img src={FilledCheck}></img>
+                <img src={FilledCheck} alt="filledcheck-icon"></img>
                 <Text>Hey Oliver, <br></br> Your ride has been booked!</Text>
             </Confirmation>
 

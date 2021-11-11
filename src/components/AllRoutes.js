@@ -37,7 +37,7 @@ object-fit: cover;
 margin-bottom: 16px;
 `
 
-const Divider= styled.img`
+const Divider= styled.div`
 width: 100%;
 border: 1px solid #E2E2E2;
 `
@@ -83,14 +83,14 @@ function AllRoutes() {
         <div className="container">
             <Header>
                 <Link to="/homescreen">
-                    <LeftArrow src={leftArrow} />
+                    <LeftArrow src={leftArrow} alt="left-arrow" />
                 </Link>
                 <Title>All Routes</Title>
             </Header>
             <Divider />
 
             <Subtitle>Odenplan - Mall of Scandinavia</Subtitle>
-            <Map src={Route1}></Map>
+            <Map src={Route1} alt="route1"></Map>
             <Link to="/matchedbuses">
                 <Button>View buses</Button>
             </Link>
@@ -98,11 +98,11 @@ function AllRoutes() {
             <Divider />
 
             <Subtitle>Stockholms Central - Stockholms Universitet</Subtitle>
-            <Map src={Route2}></Map>
+            <Map src={Route2} alt="route2"></Map>
             
             
             <WarningAlert>
-                <WarningIcon src={Warning} />
+                <WarningIcon src={Warning} alt="warning-icon" />
                 <AlertText>No current buses</AlertText>
             </WarningAlert>
 

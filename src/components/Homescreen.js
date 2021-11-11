@@ -8,7 +8,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import Karta from '../images/Karta.jpg';
+import HomeMap from '../images/Karta.jpg';
 import Hamburger from '../images/hamburger.svg';
 
 const primaryWhite = "#ffffff";
@@ -91,8 +91,8 @@ function Homescreen() {
 
     return (
         <div>
-            <Map src={Karta}></Map>
-            <Meny src={Hamburger} />
+            <Map src={HomeMap} alt="map"></Map>
+            <Meny src={Hamburger} alt="hamburger-menu" />
 
             <div className="container">
                 <InputFrom>

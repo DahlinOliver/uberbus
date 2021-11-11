@@ -144,7 +144,7 @@ function PaymentMethod() {
         <div>
         <div className="container">
             <Link to="/businfo">
-                <LeftArrow src={leftArrow} />
+                <LeftArrow src={leftArrow} alt="left-arrow" />
             </Link>
             <Header>
                 <Title>Payment</Title>
@@ -154,29 +154,29 @@ function PaymentMethod() {
             <Divider />
 
             <RowSB>
-                <img src={Cards}></img>
-                <img src={Lock}></img>
+                <img src={Cards} alt="cards"></img>
+                <img src={Lock} alt="lock-icon"></img>
             </RowSB>
 
             <form>
                 <InputContainer>
-                    <img src={User}></img>
+                    <img src={User} alt="user-icon"></img>
                     <Input1 type="text" placeholder="Cardholder" name="name" />
                 </InputContainer>
 
                 <InputContainer>
-                    <img src={CreditCard}></img>
+                    <img src={CreditCard} alt="creditcard-icon"></img>
                     <Input2 type="text" placeholder="Cardnumber" name="name" />
                 </InputContainer>
 
                 <Row>
                     <InputContainer>
-                        <img src={Date}></img>
+                        <img src={Date} alt="date-icon"></img>
                         <Input3 type="text" placeholder="MM / YY" name="name" />
                     </InputContainer>
 
                     <InputContainer>
-                        <img src={Lock}></img>
+                        <img src={Lock} alt="lock-icon"></img>
                         <Input4 type="text" placeholder="CVC" name="name" />
                     </InputContainer>
                 </Row>
@@ -189,10 +189,10 @@ function PaymentMethod() {
             <Para>Or</Para>
                 
             <Row>
-                <Column><Link to="/samsungpay"><div><img src={Samsung}></img></div></Link></Column>
-                <Column><Link to="/googlepay"><div><img src={Google}></img></div></Link></Column>
-                <Column><Link to="/applepay"><div><img src={Apple}></img></div></Link></Column>
-                <Column><Link to="/paypal"><div><img src={PayPal}></img></div></Link></Column>
+                <Column><Link to="/samsungpay"><div><img src={Samsung} alt="samsung-logo"></img></div></Link></Column>
+                <Column><Link to="/googlepay"><div><img src={Google} alt="google-logo"></img></div></Link></Column>
+                <Column><Link to="/applepay"><div><img src={Apple} alt="apple-logo"></img></div></Link></Column>
+                <Column><Link to="/paypal"><div><img src={PayPal} alt="paypal-logo"></img></div></Link></Column>
             </Row>
             
             </div>

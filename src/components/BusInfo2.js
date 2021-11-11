@@ -251,13 +251,13 @@ font-weight: 500;
 function BusInfo2() {
     return (
         <div>
-            <Map src={Karta}></Map>
-            <Link to="/matchedbuses">
-                <LeftArrow src={LeftArrowIcon} />
+            <Map src={Karta} alt="map"></Map>
+            <Link to="/matchedbuses2">
+                <LeftArrow src={LeftArrowIcon} alt="left-arrow" />
             </Link>
             <div className="container">
                 <Row5>
-                    <Img src={UberBus}></Img>
+                    <Img src={UberBus} alt="uberbus-icon"></Img>
                 </Row5>
                 <Row4>
                     <Column8>
@@ -267,27 +267,27 @@ function BusInfo2() {
 
                     <Column9>
                     <Row4>
-                        <img src={User}></img>
+                        <img src={User} alt="user-icon"></img>
                         <Para>6</Para>
                     </Row4>
                     </Column9>
                 </Row4>
 
                 <Row>
-                    <Img2 src={Sarah}></Img2>
+                    <Img2 src={Sarah} alt="sarah"></Img2>
                     <Column2>
                         <SubHeader>Sarah Wilson</SubHeader>
                         <Para>Ford E-Transit</Para>
                         <Row2>
-                            <img src={User}></img>
+                            <img src={User} alt="user-icon"></img>
                             <Para>6</Para>
-                            <img src={Leaf}></img>
+                            <img src={Leaf} alt="leaf-icon"></img>
                         </Row2>
                     </Column2>
 
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon" />
                             <Rate>4.7</Rate>
                         </Rating>
                     </Column3>
@@ -307,7 +307,7 @@ function BusInfo2() {
                 
                 <Row>
                     <Column5>
-                    <img src={Timeline}></img>
+                    <img src={Timeline} alt="timeline"></img>
                     </Column5>
 
                     <Column7>
@@ -323,7 +323,7 @@ function BusInfo2() {
                     </Column7>
 
                     <Column>
-                    <PreviewMap src={Karta}></PreviewMap>
+                    <PreviewMap src={Karta} alt="preview-map"></PreviewMap>
                     </Column>
                 </Row>
 

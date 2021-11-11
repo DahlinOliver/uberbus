@@ -136,7 +136,7 @@ function ChoosePayment() {
         <div>
         <div className="container">
             <Link to="/paymentmethod">
-                <LeftArrow src={leftArrow} />
+                <LeftArrow src={leftArrow} alt="left-arrow" />
             </Link>
             <Header>
                 <Title>Payment</Title>
@@ -151,7 +151,7 @@ function ChoosePayment() {
                     <p>Mastercard</p>
                     <p>XXXX-XXXX-XXXX-9314</p>
                 </Column1>
-                <Row1><img src={CheckCircle}></img></Row1>
+                <Row1><img src={CheckCircle} alt="checkcircle-icon"></img></Row1>
             </Block1>
             </Link>
 
@@ -167,10 +167,10 @@ function ChoosePayment() {
             <Para>Or</Para>
                 
             <Row>
-                <Column><Link to="/samsungpay"><div><img src={Samsung}></img></div></Link></Column>
-                <Column><Link to="/googlepay"><div><img src={Google}></img></div></Link></Column>
-                <Column><Link to="/applepay"><div><img src={Apple}></img></div></Link></Column>
-                <Column><Link to="/paypal"><div><img src={PayPal}></img></div></Link></Column>
+                <Column><Link to="/samsungpay"><div><img src={Samsung} alt="samsung-logo"></img></div></Link></Column>
+                <Column><Link to="/googlepay"><div><img src={Google} alt="google-logo"></img></div></Link></Column>
+                <Column><Link to="/applepay"><div><img src={Apple} alt="apple-logo"></img></div></Link></Column>
+                <Column><Link to="/paypal"><div><img src={PayPal} alt="paypal-logo"></img></div></Link></Column>
             </Row>
 
             <Link to="/paymentmethod">

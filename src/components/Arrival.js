@@ -247,25 +247,25 @@ function Arrival() {
             </Header>
 
             <Confirmation>
-                <img src={FilledCheck}></img>
+                <img src={FilledCheck} alt="filledcheck-icon"></img>
             </Confirmation>
 
             <Row>
                 <TopDivider />
-                <Img2 src={Nathan}></Img2>
+                <Img2 src={Nathan} alt="nathan"></Img2>
                 <Column2>
                     <SubHeader>Nathan Dumlao</SubHeader>
                     <Para>Mercedes-Benz EQV</Para>
                     <Row2>
-                        <img src={User}></img>
+                        <img src={User} alt="user-icon"></img>
                         <Para>11</Para>
-                        <img src={Leaf}></img>
+                        <img src={Leaf} alt="leaf-icon"></img>
                     </Row2>
                 </Column2>
 
                 <Column3>
                     <Rating>
-                        <StarSolid src={StarIcon} />
+                        <StarSolid src={StarIcon} alt="star-icon" />
                         <Rate>4.2</Rate>
                     </Rating>
                 </Column3>
@@ -289,7 +289,7 @@ function Arrival() {
 
             <Alert>
                 <Column12>
-                    <Img src={LifeBuoy}></Img>
+                    <Img src={LifeBuoy} alt="lifebuoy-icon"></Img>
                 </Column12>
                 <Column10>
                     <Text>Contact Support</Text>

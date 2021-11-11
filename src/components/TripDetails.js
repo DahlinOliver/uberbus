@@ -383,9 +383,9 @@ const [toggle, setToggle] = useState(false);
 
     return (
         <div>
-            <Map src={Karta}></Map>
+            <Map src={Karta} alt="map"></Map>
             <Link to="/paymentconfirmation">
-                <LeftArrow src={LeftArrowIcon} />
+                <LeftArrow src={LeftArrowIcon} alt="left-arrow"/>
             </Link>
 
             <div className="container">
@@ -400,20 +400,20 @@ const [toggle, setToggle] = useState(false);
                 </Alert>
 
                 <Row>
-                    <Img2 src={Nathan}></Img2>
+                    <Img2 src={Nathan} alt="nathan"></Img2>
                     <Column2>
                         <SubHeader>Nathan Dumlao</SubHeader>
                         <Para>Mercedes-Benz EQV</Para>
                         <Row2>
-                            <img src={User}></img>
+                            <img src={User} alt="user-icon"></img>
                             <Para>11</Para>
-                            <img src={Leaf}></img>
+                            <img src={Leaf} alt="leaf-icon"></img>
                         </Row2>
                     </Column2>
 
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon"/>
                             <Rate>4.2</Rate>
                         </Rating>
                     </Column3>
@@ -433,7 +433,7 @@ const [toggle, setToggle] = useState(false);
                 
                 <Row>
                     <Column5>
-                    <img src={Timeline}></img>
+                    <img src={Timeline} alt="timeline"></img>
                     </Column5>
 
                     <Column7>
@@ -449,43 +449,43 @@ const [toggle, setToggle] = useState(false);
                     </Column7>
 
                     <Column>
-                    <PreviewMap src={Karta}></PreviewMap>
+                    <PreviewMap src={Karta} alt="preview-map"></PreviewMap>
                     </Column>
                 </Row>
 
                 <Passengers>Passengers</Passengers>
                 <Row8>
-                    <Img3 src={Olivia}></Img3>
+                    <Img3 src={Olivia} alt="olivia"></Img3>
                     <Column>
                         <UserName>Olivia Sterner</UserName>
                     </Column>
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon" />
                             <Rate>4.8</Rate>
                         </Rating>
                     </Column3>
                 </Row8>
                 <Row8>
-                    <Img3 src={Jake}></Img3>
+                    <Img3 src={Jake} alt="jake"></Img3>
                     <Column>
                         <UserName>Jake Matthews</UserName>
                     </Column>
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon" />
                             <Rate>4.1</Rate>
                         </Rating>
                     </Column3>
                 </Row8>
                 <Row8>
-                    <Img3 src={Thomas}></Img3>
+                    <Img3 src={Thomas} alt="thomas"></Img3>
                     <Column>
                         <UserName>Thomas Jensen</UserName>
                     </Column>
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon" />
                             <Rate>3.9</Rate>
                         </Rating>
                     </Column3>

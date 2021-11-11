@@ -38,7 +38,7 @@ useEffect(() => {
     return (
         <div className="container">
             <Background>
-                <Img src={PayPalIcon} />
+                <Img src={PayPalIcon} alt="paypal-logo" />
             </Background>
         </div>
     )

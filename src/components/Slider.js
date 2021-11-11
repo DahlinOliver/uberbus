@@ -115,19 +115,19 @@ useEffect(() => {
           onSlideChange={() => console.log('slide change')}
         >
           <SwiperSlide>
-              <Img src={Frame1} />
+              <Img src={Frame1} alt="Frame1" />
               <Title>Enter your destination</Title>
               <Paragraph>Choose pickup and drop-off destination and search for routes.</Paragraph>
           </SwiperSlide>
 
           <SwiperSlide>
-              <Img src={Frame2} />
+              <Img src={Frame2} alt="Frame2" />
               <Title>Choose bus</Title>
               <Paragraph>Tap the bus of your choice and you will be able to see more descriptive information about the ride.</Paragraph>
           </SwiperSlide>
 
           <SwiperSlide>
-              <Img src={Frame3} />
+              <Img src={Frame3} alt="Frame3" />
               <Title>Book UberBus</Title>
               <Paragraph>You can now pay for your UberBus ride with several payment methods to make it easy for you.</Paragraph>
           </SwiperSlide>

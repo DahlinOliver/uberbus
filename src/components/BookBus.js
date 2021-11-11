@@ -253,13 +253,13 @@ font-weight: 500;
 function BookBus() {
     return (
         <div>
-            <Map src={Karta}></Map>
+            <Map src={Karta} alt="map"></Map>
             <Link to="/matchedbuses">
-                <LeftArrow src={LeftArrowIcon} />
+                <LeftArrow src={LeftArrowIcon} alt="left-arrow"/>
             </Link>
             <div className="container">
                 <Row5>
-                    <Img src={UberBus}></Img>
+                    <Img src={UberBus} alt="uberbus-icon"></Img>
                 </Row5>
                 <Row4>
                     <Column8>
@@ -269,27 +269,27 @@ function BookBus() {
 
                     <Column9>
                     <Row4>
-                        <img src={User}></img>
+                        <img src={User} alt="user-icon"></img>
                         <Para>11</Para>
                     </Row4>
                     </Column9>
                 </Row4>
 
                 <Row>
-                    <Img2 src={Nathan}></Img2>
+                    <Img2 src={Nathan} alt="nathan"></Img2>
                     <Column2>
                         <SubHeader>Nathan Dumlao</SubHeader>
                         <Para>Mercedes-Benz EQV</Para>
                         <Row2>
-                            <img src={User}></img>
+                            <img src={User} alt="user-icon"></img>
                             <Para>11</Para>
-                            <img src={Leaf}></img>
+                            <img src={Leaf} alt="leaf-icon"></img>
                         </Row2>
                     </Column2>
 
                     <Column3>
                         <Rating>
-                            <StarSolid src={StarIcon} />
+                            <StarSolid src={StarIcon} alt="star-icon" />
                             <Rate>4.2</Rate>
                         </Rating>
                     </Column3>
@@ -309,7 +309,7 @@ function BookBus() {
                 
                 <Row>
                     <Column5>
-                    <img src={Timeline}></img>
+                    <img src={Timeline} alt="timeline"></img>
                     </Column5>
 
                     <Column7>
@@ -325,7 +325,7 @@ function BookBus() {
                     </Column7>
 
                     <Column>
-                    <PreviewMap src={Karta}></PreviewMap>
+                    <PreviewMap src={Karta} alt="preview-map"></PreviewMap>
                     </Column>
                 </Row>
 
