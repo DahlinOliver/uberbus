@@ -1,11 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Strong = styled.strong`
 font-weight: 700;

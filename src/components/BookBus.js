@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Karta from '../images/route1-big.jpg';
 import LeftArrowIcon from '../images/left-arrow-circle.svg';
@@ -13,8 +10,6 @@ import StarIcon from '../images/star-solid.svg';
 import User from '../images/user.svg';
 import Leaf from '../images/leaf.svg';
 import Timeline from '../images/timeline.svg';
-import Pickup from '../images/pickup.svg';
-import DropOff from '../images/drop-off.svg';
 
 const Map = styled.img`
 height: 414px;
@@ -202,10 +197,6 @@ border: none;
 font-size: 18px;
 font-weight: 400;
 margin: 3rem 0 3rem 0;
-`
-
-const Route = styled.img`
-
 `
 
 const Test = styled.div`

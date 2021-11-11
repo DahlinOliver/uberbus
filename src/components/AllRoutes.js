@@ -5,12 +5,7 @@ import Route1 from '../images/route1.jpg';
 import Route2 from '../images/route2.jpg';
 import Warning from '../images/warning-icon.svg';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = styled.header`
 width: 100%;
@@ -55,6 +50,7 @@ width: 100%;
 color: #fff;
 border: none;
 font-size: 14px;
+margin-bottom: 1rem;
 `
 
 const WarningAlert = styled.div`

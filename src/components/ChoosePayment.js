@@ -1,22 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import leftArrow from '../images/left-arrow.svg';
-import User from '../images/user24.svg';
-import CreditCard from '../images/credit-card.svg';
-import Date from '../images/date.svg';
-import Lock from '../images/lock.svg';
-import Cards from '../images/cards.png';
-import Samsung from '../images/samsung.png';
-import Google from '../images/google.png';
-import Apple from '../images/apple.png';
-import PayPal from '../images/paypal.png';
+import Samsung from '../images/samsungpay.png';
+import Google from '../images/googlepay.png';
+import Apple from '../images/applepay.png';
+import PayPal from '../images/paypal-logo.png';
 import CheckCircle from '../images/check-circle.svg';
 
 const Header = styled.header`
@@ -77,14 +67,6 @@ justify-content: space-between;
 height: 50px;
 `
 
-const Column2 = styled.div`
-display: flex;
-flex-direction: column;
-flex-basis: 100%;
-flex: 1;
-align-items: center;
-`
-
 const Divider = styled.div`
 width: 100%;
 border: 1px solid #E2E2E2;
@@ -131,6 +113,16 @@ border-radius: 5px;
 color: #fff;
 `
 
+const Img = styled.img`
+width: 3.5rem;
+`
+
+const Center = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
 function ChoosePayment() {
     return (
         <div>
@@ -167,10 +159,10 @@ function ChoosePayment() {
             <Para>Or</Para>
                 
             <Row>
-                <Column><Link to="/samsungpay"><div><img src={Samsung} alt="samsung-logo"></img></div></Link></Column>
-                <Column><Link to="/googlepay"><div><img src={Google} alt="google-logo"></img></div></Link></Column>
-                <Column><Link to="/applepay"><div><img src={Apple} alt="apple-logo"></img></div></Link></Column>
-                <Column><Link to="/paypal"><div><img src={PayPal} alt="paypal-logo"></img></div></Link></Column>
+                <Column><Link to="/samsungpay"><Center><Img src={Samsung} alt="samsung-logo"></Img></Center></Link></Column>
+                <Column><Link to="/googlepay"><Center><Img src={Google} alt="google-logo"></Img></Center></Link></Column>
+                <Column><Link to="/applepay"><Center><Img src={Apple} alt="apple-logo"></Img></Center></Link></Column>
+                <Column><Link to="/paypal"><Center><Img src={PayPal} alt="paypal-logo"></Img></Center></Link></Column>
             </Row>
 
             <Link to="/paymentmethod">

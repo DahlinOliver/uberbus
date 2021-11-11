@@ -3,11 +3,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect,
 } from "react-router-dom";
 
-import Intro from './components/Intro';
 import Slider from './components/Slider';
 import Homescreen from './components/Homescreen';
 import MatchedRoutes from './components/MatchedRoutes';

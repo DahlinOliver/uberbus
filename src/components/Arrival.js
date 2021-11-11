@@ -1,11 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import FilledCheck from '../images/check-circle-filled.svg';
 import Nathan from '../images/nathan.png';

@@ -1,12 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useHistory,
-} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import Karta from '../images/route1-big.jpg';
 import LeftArrowIcon from '../images/left-arrow-circle.svg';
@@ -33,16 +27,6 @@ const Subtitle = styled.h3`
 text-align: center;
 `
 
-const Row = styled.div`
-height: 65px;
-width: 100%;
-display: flex;
-justify-content: space-between;
-flex-direction: row;
-align-items: center;
-margin-bottom: 16px;
-`
-
 const RowCenter = styled.div`
 height: 65px;
 width: 100%;
@@ -65,10 +49,6 @@ width: 65%;
 display: flex;
 flex-direction: column;
 justify-content: center;
-`
-
-const ArrivalTime = styled.p`
-font-size: 12px;
 `
 
 const Rating = styled.div`
@@ -137,9 +117,9 @@ function MatchedBuses() {
     return (
         <div>
             <Map src={Karta} alt="map"></Map>
-            <button onClick={goToPreviousPath}>
+            <Link to="/matchedroutes">
                 <LeftArrow src={LeftArrowIcon} alt="left-arrow" />
-            </button>
+            </Link>
             <div className="container">
                 <Subtitle>Choose bus</Subtitle>
 

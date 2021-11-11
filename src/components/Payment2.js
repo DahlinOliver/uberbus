@@ -1,26 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import leftArrow from '../images/left-arrow.svg';
 import CountDownTimer from './CountDownTimer';
 import StarIcon from '../images/star-solid.svg';
-import CancelTrip from './CancelTrip';
 
 const Header = styled.header`
 width: 100%;
 height: auto;
-padding-top: 62px;
+padding-top: 42px;
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
-margin-bottom: 36px;
+margin-bottom: 52px;
 `
 
 const LeftArrow = styled.img`

@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useHistory,
-  Redirect,
-} from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 
 import styled from 'styled-components';
-import PayPalIcon from '../images/paypal.png';
+import PayPalIcon from '../images/paypal-logo.png';
 
 const Background = styled.div`
 background-color: #fff;

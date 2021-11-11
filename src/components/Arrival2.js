@@ -1,11 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import FilledCheck from '../images/check-circle-filled.svg';
 import Sarah from '../images/sarah.png';
@@ -254,11 +249,11 @@ function Arrival2() {
                 <TopDivider />
                 <Img2 src={Sarah} alt="sarah"></Img2>
                 <Column2>
-                    <SubHeader>Nathan Dumlao</SubHeader>
-                    <Para>Mercedes-Benz EQV</Para>
+                    <SubHeader>Sarah Wilson</SubHeader>
+                    <Para>Ford E-Transit</Para>
                     <Row2>
                         <img src={User} alt="user-icon"></img>
-                        <Para>11</Para>
+                        <Para>6</Para>
                         <img src={Leaf} alt="leaf-icon"></img>
                     </Row2>
                 </Column2>
@@ -266,7 +261,7 @@ function Arrival2() {
                 <Column3>
                     <Rating>
                         <StarSolid src={StarIcon} alt="star-icon" />
-                        <Rate>4.2</Rate>
+                        <Rate>4.7</Rate>
                     </Rating>
                 </Column3>
 

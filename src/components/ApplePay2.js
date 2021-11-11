@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useHistory,
-  Redirect,
-} from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 
 import styled from 'styled-components';
-import Apple from '../images/apple.png';
+import Apple from '../images/applepay.png';
 
 const Background = styled.div`
 background-color: #fff;

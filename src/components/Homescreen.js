@@ -1,37 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import HomeMap from '../images/Karta.jpg';
 import Hamburger from '../images/hamburger.svg';
-
-const primaryWhite = "#ffffff";
-const primaryBlack = "#000000";
-
-const gray600 = "#545454";
-const gray500 = "#757575";
-const gray400 = "#AFAFAF";
-const gray200 = "#E2E2E2";
-const gray100 = "#EEEEEE";
-const gray50 = "#F6F6F6";
-
-const XXLarge = "40px";
-const XLarge = "36px";
-const Large = "32px";
-const Medium = "28px";
-const Small = "24px";
-const XSmall = "20px";
+import ExitIcon from '../images/exit.svg';
+import LifeBuoy from '../images/life-buoy.svg';
+import Settings from '../images/settings.svg';
+import Info from '../images/info.svg';
 
 const LargeP = "18px";
-const MediumP = "16px";
-const SmallP = "14px";
-const XSmallP = "12px";
 
 const Map = styled.img`
 height: 414px;
@@ -50,6 +28,7 @@ top: 48px;
 
 const InputFrom = styled.div`
 margin-bottom: 32px;
+overflow: hidden;
 `
 
 const Label = styled.label`
@@ -62,10 +41,12 @@ width: 100%;
 height: 48px;
 background-color: #EEEEEE;
 border: none;
+padding-left: 1rem;
 `
 
 const InputTo = styled.div`
 margin-bottom: 70px;
+overflow: hidden;
 `
 
 const MatchedRoutes = styled.button`
@@ -87,21 +68,100 @@ border: none;
 font-size: ${LargeP};
 `
 
+// Hamburger
+const Bg = styled.div`
+background-color: #fff;
+height: 100vh;
+width: 100%;
+position: fixed;
+left: 0;
+top: 0;
+`
+
+const Exit = styled.img`
+position: fixed;
+left: 24px;
+top: 48px;
+`
+
+const Alert = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+margin: 1rem 0 1rem 0;
+background-color: #000;
+height: 56px;
+margin-bottom: 8rem;
+`
+
+const Column12 = styled.div`
+display: flex;
+flex-direction: column;
+border-right: 1px solid #e2e2e2;
+justify-content: center;
+align-items: center;
+`
+
+const Img = styled.img`
+height: 36px;
+width: 36px;
+padding: 0 1.3rem 0 1.3rem;
+`
+
+const Column10 = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex: 1;
+`
+
+const Text = styled.p`
+font-size: 16px;
+color: #fff;
+font-weight: 300;
+`
+
+const Button = styled.button`
+background-color: #E11900;
+width: 80%;
+height: 48px;
+color: #fff;
+font-size: 16px;
+border: none;
+`
+
+const List = styled.div`
+margin-top: 8rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
+const ExitBtn = styled.button`
+border: none;
+`
+
 function Homescreen() {
+
+const [toggle, setToggle] = useState(false);    
 
     return (
         <div>
             <Map src={HomeMap} alt="map"></Map>
-            <Meny src={Hamburger} alt="hamburger-menu" />
+            <button onClick={() => setToggle(toggle => !toggle)}>
+                <Meny src={Hamburger} alt="hamburger-menu" />
+            </button>
 
             <div className="container">
                 <InputFrom>
-                    <Label for="from">From:</Label>
+                    <Label htmlFor="from">From:</Label>
                     <Input type="text" placeholder="Karlbergsvägen 12" id="from" name="from" disabled/>
                 </InputFrom>
 
                 <InputTo>
-                    <Label for="to">To:</Label>
+                    <Label htmlFor="to">To:</Label>
                     <Input type="text" placeholder="Mall of Scandinavia" id="to" name="to" disabled/>
                 </InputTo>
 
@@ -114,6 +174,47 @@ function Homescreen() {
                 </Link>
 
             </div>
+
+            {toggle && 
+            <Bg>
+                <div className="container">
+                <ExitBtn onClick={() => setToggle(toggle => !toggle)}>
+                    <Exit src={ExitIcon} alt="exit-menu" />
+                </ExitBtn>
+
+                <List>
+                <Alert>
+                    <Column12>
+                        <Img src={LifeBuoy} alt="lifebuoy-icon"></Img>
+                    </Column12>
+                    <Column10>
+                        <Text>Contact Support</Text>
+                    </Column10>
+                </Alert>
+
+                <Alert>
+                    <Column12>
+                        <Img src={Settings} alt="settings-icon"></Img>
+                    </Column12>
+                    <Column10>
+                        <Text>Settings</Text>
+                    </Column10>
+                </Alert>
+
+                <Alert>
+                    <Column12>
+                        <Img src={Info} alt="info-icon"></Img>
+                    </Column12>
+                    <Column10>
+                        <Text>Information Center</Text>
+                    </Column10>
+                </Alert>
+
+                <Button>Log out</Button>
+                </List>
+                </div>
+            </Bg>
+            }
         </div>
     )
 }

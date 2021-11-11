@@ -1,21 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Karta from '../images/route1-big.jpg';
 import LeftArrowIcon from '../images/left-arrow-circle.svg';
-import UberBus from '../images/uber-bus.png';
 import Sarah from '../images/sarah.png';
 import StarIcon from '../images/star-solid.svg';
 import User from '../images/user.svg';
 import Leaf from '../images/leaf.svg';
 import Timeline from '../images/timeline.svg';
-import Pickup from '../images/pickup.svg';
-import DropOff from '../images/drop-off.svg';
 import Sophie from '../images/sophie.png';
 import Liam from '../images/liam.png';
 import Grace from '../images/grace.png';
@@ -32,11 +25,6 @@ const LeftArrow = styled.img`
 position: absolute;
 left: 0;
 top: 48px;
-`
-
-const Img = styled.img`
-width: 63px;
-height: 48px;
 `
 
 const Img2 = styled.img`
@@ -103,28 +91,6 @@ flex-direction: column;
 flex-basis: 100%;
 flex: 1;
 justify-content: flex-start;
-`
-
-const Column8 = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-`
-
-const Column9 = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-margin-top: 8px;
-`
-
-const Row4 = styled.div`
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-width: 100%;
-/* border: 1px solid black; */
-/* margin: 1.5rem 0 1.5rem 0; */
 `
 
 const Column2 = styled.div`
@@ -196,25 +162,6 @@ width: 100%;
 height: 124px;
 border-radius: 5px;
 object-fit: cover;
-`
-
-const Button = styled.button`
-background-color: #000;
-height: 56px;
-width: 100%;
-color: #fff;
-border: none;
-font-size: 18px;
-font-weight: 400;
-margin: 3rem 0 3rem 0;
-`
-
-const Route = styled.img`
-
-`
-
-const Test = styled.div`
-/* margin-bottom: 3.7rem; */
 `
 
 const Total = styled.p`

@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import styled from 'styled-components';
-import intro from '../images/intro.png';
 import Frame1 from '../images/frame1.jpg';
 import Frame2 from '../images/frame2.jpg';
 import Frame3 from '../images/frame3.jpg';
@@ -26,27 +19,9 @@ import SwiperCore, {
 
 SwiperCore.use([Pagination, Navigation]);
 
-const primaryWhite = "#ffffff";
-const primaryBlack = "#000000";
-
-const gray600 = "#545454";
-const gray500 = "#757575";
-const gray400 = "#AFAFAF";
-const gray200 = "#E2E2E2";
-const gray100 = "#EEEEEE";
-const gray50 = "#F6F6F6";
-
-const XXLarge = "40px";
 const XLarge = "36px";
-const Large = "32px";
-const Medium = "28px";
-const Small = "24px";
-const XSmall = "20px";
-
 const LargeP = "18px";
 const MediumP = "16px";
-const SmallP = "14px";
-const XSmallP = "12px";
 
 const Img = styled.img`
 width: 100%;
@@ -69,15 +44,6 @@ background-color: #000;
 height: 56px;
 width: 100%;
 color: #fff;
-border: none;
-font-size: ${LargeP};
-`
-
-const Skip = styled.button`
-background-color: transparent;
-height: 56px;
-width: 100%;
-color: #000;
 border: none;
 font-size: ${LargeP};
 `
